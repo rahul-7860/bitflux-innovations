@@ -1,0 +1,75 @@
+/* BitFlux Innovations — Styles (responsive, gradient theme) */
+:root{
+  --bg:#ffffff;
+  --text:#0f1724;
+  --muted:#556070;
+  --accent1:#00d0ff;
+  --accent2:#00a0ff;
+  --accent3:#7a48ff;
+  --card-bg:rgba(255,255,255,0.9);
+  --glass:rgba(255,255,255,0.6);
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;margin:0;color:var(--text);background:linear-gradient(180deg,#fbfdff 0%, #f7fbff 100%);-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{
+  height:56px;
+  max-height:56px;
+  width:auto;
+  display:block;
+}
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav a.cta{background:linear-gradient(90deg,var(--accent2),var(--accent3));color:white}
+.nav-toggle{display:none;background:none;border:0;font-size:20px}
+.site-header{backdrop-filter:blur(6px);position:sticky;top:0;background:rgba(255,255,255,0.6);z-index:50;border-bottom:1px solid rgba(15,23,36,0.04)}
+
+.hero{padding:80px 0}
+.hero-inner{display:flex;align-items:center;gap:40px}
+.hero-text h1{font-size:44px;margin:0 0 12px}
+.lead{color:var(--muted);font-size:18px;margin:0 0 20px}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none}
+.btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent3));color:white}
+.btn-outline{border:1px solid rgba(10,10,10,0.06);color:var(--text);background:white}
+
+.hero-svg{width:320px;height:200px;border-radius:14px}
+.services-preview{padding:40px 0}
+.section-sub{color:var(--muted)}
+.grid{display:grid;gap:18px}
+.cols-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.cols-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(250,250,255,0.9));box-shadow:0 6px 18px rgba(10,10,25,0.04)}
+.thumb{height:80px;border-radius:8px;background:linear-gradient(90deg,var(--accent1),var(--accent3));display:flex;align-items:center;justify-content:center;color:white}
+.split{display:flex;gap:24px;align-items:center}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact-cta{padding:36px 0}
+.contact-cta-inner{display:flex;align-items:center;justify-content:space-between;padding:20px;border-radius:12px;background:linear-gradient(90deg,rgba(0,208,255,0.08),rgba(122,72,255,0.06))}
+
+.page-hero{padding:40px 0}
+.section{padding:36px 0}
+.person .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(90deg,var(--accent1),var(--accent3));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+
+.site-footer{padding:18px 0;background:transparent;border-top:1px solid rgba(15,23,36,0.04)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+
+.contact-section .contact-form label{display:block;margin-bottom:12px}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;border:1px solid rgba(10,10,25,0.06);border-radius:8px}
+.contact-info .socials a{display:inline-block;margin-right:8px}
+
+/* Responsive */
+@media(max-width:880px){
+  .hero-inner{flex-direction:column}
+  .nav{display:none}
+  .nav-toggle{display:block}
+  .split{flex-direction:column}
+  .logo{height:44px;max-height:44px}
+}
+
+/* subtle animated gradient for accents */
+.btn-primary{background-size:200% 200%;animation:wave 6s linear infinite}
+@keyframes wave{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+/* utility */
+.text-center{text-align:center}
